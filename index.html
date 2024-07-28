@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Transcript</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Farhan Sadeek <br>and <br>Can Alpay <br>Interview</h1>
+    </header>
+
+    <div class="container">
+        <div class="interview-section">
+            <p class="timestamp">[00:00:03]</p>
+            <p class="speaker">Farhan Sadeek:</p>
+            <p class="text">Awesome! I wanted to conduct an interview about your work on machine learning. My scientific
+                article is based on machine learning in healthcare, and I thought you would be a great fit for this
+                discussion since you were my professor. I checked your LinkedIn profile and saw that you’re working with
+                machine learning, specifically in ocean temperature prediction. Although the topics might
+                differ—healthcare versus ocean temperature—the questions are quite broad and elementary, so you’d likely
+                be a good fit for this. My first question is: Can you tell me a bit more about the research you’re doing
+                so I can get a better understanding?</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:00:46]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">Alright, for my latest project, I’m working with simulation predictions to get ocean
+                temperature data for the next 10 years, or for every five days, for example. To obtain these temperature
+                predictions, we need to set up some parameters, so we have a parameter set and corresponding outputs.
+                The goal is to use machine learning to predict these outputs more efficiently. Essentially, machine
+                learning helps us generate predictions faster than waiting for the entire simulation results.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:01:32]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">We use machine learning in this area because the ocean data is enormous. We start by
+                reducing the resolution of the data to manage its size, then perform predictions using Convolutional
+                Neural Networks (CNNs) and Graph Neural Networks. After generating predictions, we incrementally
+                increase the resolution back to the original size and assess the quality compared to the actual
+                simulation output. This is the basic pipeline of what I’m doing.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:02:02]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">More specifically, I’m also working on time series prediction. For instance, when you run
+                simulations, you get data for 10 consecutive years, with outputs for each month. Machine learning models
+                typically focus on predicting a single time frame, like June 5 after five years. The downside of this
+                approach is that it only provides predictions for one time frame at a time, rather than the entire
+                10-year span. To address this, I’m developing machine learning models that can generate recurrent
+                predictions, forecasting one period after another using previous data. I then test these predictions for
+                accuracy.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:02:53]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">What I’m doing is similar to asset pricing, such as stock or cryptocurrency prediction.
+                While the core idea of time series forecasting is similar, the data construction differs. Instead of a
+                single data point predicting the next, ocean temperature data involves a more complex and extensive data
+                structure.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:03:38]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">At a certain point, what we do is generate the graph. Because the ocean data is enormous and
+                consists of unstructured mesh data, we construct a graph to represent that mesh. This graph is still
+                quite large, so we aim to simplify it. For example, instead of representing thousands of nodes for
+                Antarctica, we might represent it with a single node, assuming that the data doesn’t change
+                significantly over a period of four or five years. This simplification reduces the complexity of the
+                graph. We first find a way to simplify it and then use the graph structure for predictions over
+                different time steps. We try to predict the next graph structure with temperatures. The approach is a
+                bit different, but the baseline idea is the same: it's essentially forecasting.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:04:30]</p>
+            <p class="speaker">Farhan Sadeek:</p>
+            <p class="text">My next question is: How would you explain machine learning to a five-year-old? What is it
+                exactly? Can you repeat the beginning of the question? Yeah, so this is for a science writing interview.
+                I understand what machine learning is, but if you were explaining it to a child, how would you describe
+                it?</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:05:15]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">For a simple explanation, I would say: Imagine you have a lot of pictures, some of cats and
+                some of dogs. Machine learning is like teaching a computer to recognize the difference between them. For
+                example, when you look at cat pictures versus dog pictures, you notice that cats and dogs have different
+                features. Your brain can process this and tell them apart. To teach a computer to do the same, you show
+                it many pictures of cats and dogs. The computer learns the features that make a cat different from a
+                dog. Then, when you show it a new picture, it can say if it’s a cat or a dog based on what it learned.
+                Essentially, machine learning is about teaching a computer to recognize patterns from data so it can
+                make predictions or decisions on new, unseen data.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:07:33]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">In machine learning, we don’t explicitly tell the computer what to do. Instead, it learns
+                from the data we provide. Yes, exactly. So, regarding healthcare, I know you’ve worked with
+                organizations related to healthcare. How can machine learning impact healthcare? For example, it could
+                be used in cancer or tumor detection. How can machine learning make a difference in healthcare?</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:08:34]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">Building on my previous explanation, pathology detection is quite straightforward. You show
+                the computer images of disease and normal tissue, and it learns to identify the differences. For
+                instance, it can identify problematic areas in new images based on what it has learned. Beyond pathology
+                detection, machine learning can also be used to understand and analyze medical articles. For example, if
+                you have a medical text that is difficult to understand, you can use machine learning to explain it more
+                clearly.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:09:19]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">To give specific examples: First, you can train a machine learning model with medical images
+                and teach it to identify problems, such as diseases or tumors. Second, you can use machine learning like
+                a virtual doctor. By inputting symptoms into a system trained with extensive medical knowledge, the
+                system can suggest possible diagnoses. One of my friends used ChatGPT for this purpose; by providing
+                symptoms and medical records, it could identify potential problems.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:10:48]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">Third, machine learning can enhance the efficiency of medical imaging processes like MRIs.
+                Instead of taking 40 minutes for an MRI scan, machine learning can help create high-quality images more
+                quickly. It can also reconstruct a 3D structure from multiple 2D images, improving diagnostic accuracy
+                and efficiency.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:13:44]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">To clarify the third point: Machine learning can make the MRI process faster by focusing on
+                specific parts of the image that may indicate issues. Instead of constructing an entire 3D image from
+                scratch, AI can reconstruct 3D structures from various 2D perspectives, presenting a more comprehensive
+                view to doctors.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:14:27]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">The general idea is to use AI to enhance the speed and accuracy of medical imaging, making
+                it easier for doctors to diagnose and treat patients.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:14:34]</p>
+            <p class="speaker">Farhan Sadeek:</p>
+            <p class="text">Now, let's discuss the limitations and ethical concerns associated with these technologies.
+                For example, one issue is data privacy, as medical data needs to be stored and managed securely. Are
+                there other potential issues or ethical concerns?</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:15:10]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">If you could just give us a little bit of an overview on how each of these could pose some
+                issues or implications. Yeah. So the easiest way. Yeah. Yeah. So the biggest challenge is that you
+                cannot trust AI all the time. So let's say you have a model with 95% accuracy. It means that 5% of your
+                patients could be wrongly diagnosed or not diagnosed at all. For instance, if you have cancer in your
+                stomach, and the AI tells you that you don’t have cancer, you are wrongly diagnosed and therefore not
+                treated. When this happens, whose fault is it? This is a significant concern in the healthcare system
+                and medicine.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:15:58]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">The biggest challenge is that as long as you don’t have a 100% accurate machine, you cannot
+                fully trust it. You have to use some type of doctors or observers at different steps to verify the
+                results. But that’s a problem because, as we start using AI, we are likely to treat more patients than
+                we usually do. This means we increase the workload for observers as well, which becomes an issue. I
+                don’t know how they’re going to solve it, but this is a huge concern. I remember when I was in
+                university, I did a project with 95% accuracy, and I was very happy with it.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:16:42]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">But then the professor was very concerned because it meant that 5% of the patients would be
+                wrongly treated. Who would want to go to a hospital where there is a 5% chance of getting a wrong
+                diagnosis every day? That’s a significant concern about AI. The second concern is that even if AI
+                provides the right treatment, the human factor is still very vital in this process, especially in
+                medicine.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:17:26]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">For instance, whenever I get the results, I pass them to ChatGPT to see what it says. It
+                might say, "You have blah, blah, blah," and then explain it to me. But I still wait for a doctor to
+                review it because I don’t fully trust AI at the moment. I want to get some input from a human so that I
+                can say, "Okay, this is acceptable."</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:17:58]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">This is specific to me, but I believe most people will still feel this way—that they don’t
+                trust AI completely. That’s the second part. The third concern involves ethical issues and potential
+                problems. One major issue is that AI might start treating different races unfairly. For example, if most
+                of the Hispanic people in the dataset have stomach cancer, the AI might wrongly diagnose someone of
+                Hispanic descent with stomach cancer based on their race.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:18:49]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">This is a huge concern because if your data lacks variety in terms of race, age, and other
+                factors, the AI might give the same diagnosis to every 27-year-old patient or make similar errors. The
+                biggest problem with machine learning is that you believe the model has learned the patterns, but 99% of
+                the time, you don’t know what patterns the model has learned. It’s like the black box issue in machine
+                learning—you don’t know exactly what the model is doing under the hood.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:19:52]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">For example, the AI might consistently give the same result to every Black person who is 27
+                years old. As the model becomes more specific, it may focus on particular patterns and provide
+                consistent outputs for similar features. This lack of transparency is a major concern because you don’t
+                know what the model has learned. When you see a doctor, they don’t consider your race, but you don’t
+                know whether your AI model does.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:21:16]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">You may try to exclude race from the model, but that can introduce other problems. Machine
+                learning cannot be told to learn specific features directly; you have to provide a large amount of data
+                and let the model learn from it. That’s a huge problem. This black box issue isn’t confined to the
+                healthcare system; it’s an issue everywhere.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:22:03]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">For example, I read in an article from a class on ethics that AI was used to identify
+                potential terrorists in airports. The model was set up, but after a day or two, it was canceled because
+                it only targeted people from the Middle East. This was a problem because the data used for training the
+                model was skewed.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:22:53]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">If you use historical prison data for predicting future crimes, for instance, data from
+                before 1995 might be skewed, with 80% of the data consisting of Black people. The AI might then
+                disproportionately target Black individuals. This is a huge problem.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:24:30]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">To address these issues, data should be recent and up-to-date. Treatments change over time,
+                so using outdated data can lead to incorrect predictions. You need to ensure that data is accurate and
+                comprehensive. To enrich the data, you can gather information from various sources, such as different
+                hospitals, and use it to build a more robust dataset.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:25:16]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">There are techniques to enrich data, but the simplest approach is to collect data from
+                diverse sources to cover different scenarios. Even if you don’t have enough data or notice specific
+                patterns in outputs, you can adjust the model by adding more varied examples or penalizing certain
+                learning patterns.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:26:07]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">For example, if you provide images of people standing and sitting, and the model only sees
+                one person standing and another sitting, it might misidentify features. By providing balanced data—both
+                people standing and sitting—you can improve the model’s accuracy.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:27:34]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">In summary, to improve healthcare or machine learning predictions and models, ensure the
+                data is rich and unbiased. Provide a diverse set of examples to help the model learn accurately and
+                avoid introducing biases.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:28:20]</p>
+            <p class="speaker">Farhan Sadeek:</p>
+            <p class="text">What are some other things we should consider? One thing I’m thinking about is whether there
+                is a way to understand how the AI is learning. That might be something to consider.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:29:58]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">Yes, the goal is to understand how the machine learning model is working. However, both
+                sides are tricky. I’m thinking of an analogy, but it’s a bit complex. The problem is, when you identify
+                how your machine learning model works—i.e., what patterns it has learned—you might inadvertently weaken
+                the model. Why? Because if I know how the model treats patients, I can exploit that knowledge to get a
+                specific diagnosis or result.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:30:42]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">For instance, if I know how your machine learning model works, and I need to take time off
+                work, I could potentially use that information to fake a specific condition and receive the diagnosis I
+                want. This is a significant problem. The main reason for the black box nature of machine learning is to
+                prevent these types of issues.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:31:24]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">If you know the specifics of how the black box operates, you could manipulate inputs to get
+                desired outputs, which is not ideal. Therefore, we need some understanding of how the model learns, even
+                if we don’t know the exact patterns it uses. This is why, when you read machine learning articles, they
+                explain loss functions, how they derive these functions, and how they use them. By explaining the
+                specific parts of these loss functions, you are clarifying how the model learns without explicitly
+                revealing the patterns.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:32:23]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">This way, you preserve the black box nature while providing some insight into the learning
+                process. This approach helps in making the model more trustworthy while maintaining its protective
+                complexity. To enhance the accuracy and reliability of machine learning models, you need to enrich your
+                data and provide at least a brief description of what happens inside the black box. This makes the
+                system more transparent and trustworthy.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:32:23]</p>
+            <p class="speaker">Can Alpay:</p>
+            <p class="text">Another aspect to consider is that you need to continually refine and improve the accuracy
+                of the model. Ensuring that the model is as accurate and reliable as possible is crucial. These are some
+                of the key considerations that come to mind.</p>
+        </div>
+
+        <div class="interview-section">
+            <p class="timestamp">[00:33:09]</p>
+            <p class="speaker">Farhan Sadeek:</p>
+            <p class="text">I think that covers everything. You’ve answered all my questions. Let me quickly share the
+                article with you for a better understanding of whether I wrote things correctly. Here’s the link to the
+                article I wrote. I’ll add a bit more once I have the transcripts and include some of the points we
+                discussed. One last thing: this is just a bit of practice, like conducting an interview, which is a
+                professional aspect of the process.</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 1px;
+    border-radius: 10px 10px 0 0;
+}
+
+.interview-section {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.timestamp {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.speaker {
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.text {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 1em;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    header {
+        font-size: 1.5em;
+    }
+
+    .interview-section {
+        padding: 20px;
+    }
+
+    .timestamp, .speaker, .text {
+        font-size: 0.9em;
+    }
+}
